@@ -249,6 +249,7 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 let currentLanguage = "en";
 let typingIntervalId = null;
 let typingTimeoutId = null;
+let formToastTimeoutId = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   currentLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) === "hi" ? "hi" : "en";
@@ -260,6 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applyLanguage(currentLanguage, { animateHero: !prefersReducedMotion.matches });
   initMagneticButton();
   initCounters();
+  initFormToast();
   initFormHandling();
   initPricingActions();
   initMobileCardSliders();
@@ -386,6 +388,8 @@ function applyLanguage(language, options = {}) {
   renderTypingLines(Boolean(options.animateHero));
   syncPrefilledMessage();
   syncFormStatus();
+  syncFormToast();
+  syncSubmitButtonState();
 }
 
 function updateMetaText() {
@@ -631,6 +635,7 @@ function initFormHandling() {
   }
 
   setFormStatus("default");
+  setSubmitButtonState("idle");
 
   messageField.addEventListener("input", () => {
     const selectedPackage = messageField.dataset.prefilledPackage;
@@ -649,6 +654,7 @@ function initFormHandling() {
 
     if (!form.reportValidity()) {
       setFormStatus("validation");
+      showFormToast("validation");
       return;
     }
 
@@ -659,6 +665,8 @@ function initFormHandling() {
     form.classList.add("is-submitting");
     submitButton.disabled = true;
     setFormStatus("submitting");
+    setSubmitButtonState("submitting");
+    showFormToast("submitting");
 
     try {
       const response = await fetch(endpoint, {
@@ -679,12 +687,15 @@ function initFormHandling() {
         card.classList.remove("is-selected");
       });
       setFormStatus("success");
+      showFormToast("success");
     } catch (error) {
       console.error(error);
       setFormStatus("error");
+      showFormToast("error");
     } finally {
       form.classList.remove("is-submitting");
       submitButton.disabled = false;
+      setSubmitButtonState("idle");
     }
   });
 }
@@ -1101,6 +1112,19 @@ function getPackageName(packageId) {
   return getTranslation(packageKeys[packageId] || "");
 }
 
+function initFormToast() {
+  const toast = document.getElementById("form-toast");
+  const closeButton = document.getElementById("form-toast-close");
+
+  if (!toast || !closeButton) {
+    return;
+  }
+
+  closeButton.addEventListener("click", () => {
+    hideFormToast();
+  });
+}
+
 function setFormStatus(statusKey, packageId = "") {
   const status = document.getElementById("form-status");
 
@@ -1129,6 +1153,216 @@ function syncFormStatus() {
   const statusKey = status.dataset.statusKey || "default";
   const packageId = status.dataset.packageId || "";
   status.textContent = getFormStatusMessage(statusKey, packageId);
+}
+
+function setSubmitButtonState(stateKey = "idle") {
+  const submitButton = document.querySelector('#contact-form button[type="submit"]');
+  const label = submitButton?.querySelector("span");
+
+  if (!submitButton || !label) {
+    return;
+  }
+
+  submitButton.dataset.state = stateKey;
+  submitButton.classList.toggle("is-loading", stateKey === "submitting");
+  submitButton.setAttribute("aria-busy", String(stateKey === "submitting"));
+  label.textContent = getSubmitButtonLabel(stateKey);
+}
+
+function syncSubmitButtonState() {
+  const form = document.getElementById("contact-form");
+  const isSubmitting = Boolean(form?.classList.contains("is-submitting"));
+  setSubmitButtonState(isSubmitting ? "submitting" : "idle");
+}
+
+function getSubmitButtonLabel(stateKey = "idle") {
+  if (stateKey === "submitting") {
+    return currentLanguage === "hi" ? "भेजा जा रहा है..." : "Sending...";
+  }
+
+  return getTranslation("form.submit") || "Send Message";
+}
+
+function showFormToast(statusKey, packageId = "") {
+  const toast = document.getElementById("form-toast");
+  const icon = document.getElementById("form-toast-icon");
+  const eyebrow = document.getElementById("form-toast-eyebrow");
+  const title = document.getElementById("form-toast-title");
+  const message = document.getElementById("form-toast-message");
+  const closeButton = document.getElementById("form-toast-close");
+
+  if (!toast || !icon || !eyebrow || !title || !message || !closeButton) {
+    return;
+  }
+
+  const content = getFormToastContent(statusKey, packageId);
+
+  if (!content) {
+    hideFormToast(true);
+    return;
+  }
+
+  window.clearTimeout(formToastTimeoutId);
+  formToastTimeoutId = null;
+
+  toast.dataset.state = content.state;
+  toast.dataset.statusKey = statusKey;
+
+  if (packageId) {
+    toast.dataset.packageId = packageId;
+  } else {
+    delete toast.dataset.packageId;
+  }
+
+  eyebrow.textContent = content.eyebrow;
+  title.textContent = content.title;
+  message.textContent = content.message;
+  icon.innerHTML = getFormToastIcon(content.state);
+  closeButton.setAttribute(
+    "aria-label",
+    currentLanguage === "hi" ? "नोटिफिकेशन बंद करें" : "Dismiss notification"
+  );
+  toast.setAttribute("aria-live", content.state === "error" || content.state === "validation" ? "assertive" : "polite");
+  toast.hidden = false;
+
+  requestAnimationFrame(() => {
+    toast.classList.add("is-visible");
+  });
+
+  if (content.autoHideMs > 0) {
+    formToastTimeoutId = window.setTimeout(() => {
+      hideFormToast();
+    }, content.autoHideMs);
+  }
+}
+
+function hideFormToast(immediate = false) {
+  const toast = document.getElementById("form-toast");
+
+  if (!toast) {
+    return;
+  }
+
+  window.clearTimeout(formToastTimeoutId);
+  formToastTimeoutId = null;
+  toast.classList.remove("is-visible");
+
+  if (immediate) {
+    toast.hidden = true;
+    return;
+  }
+
+  window.setTimeout(() => {
+    if (!toast.classList.contains("is-visible")) {
+      toast.hidden = true;
+    }
+  }, 320);
+}
+
+function syncFormToast() {
+  const toast = document.getElementById("form-toast");
+
+  if (!toast || toast.hidden) {
+    return;
+  }
+
+  showFormToast(toast.dataset.statusKey || "default", toast.dataset.packageId || "");
+}
+
+function getFormToastContent(statusKey, packageId = "") {
+  if (statusKey === "validation") {
+    return {
+      state: "validation",
+      eyebrow: currentLanguage === "hi" ? "ध्यान दें" : "Heads Up",
+      title: currentLanguage === "hi" ? "कृपया सभी ज़रूरी फ़ील्ड भरें" : "Complete the required details",
+      message:
+        currentLanguage === "hi"
+          ? "नाम, ईमेल और मैसेज भरने के बाद form दोबारा submit करें।"
+          : "Add your name, email, and message, then submit the form again.",
+      autoHideMs: 4200,
+    };
+  }
+
+  if (statusKey === "submitting") {
+    return {
+      state: "submitting",
+      eyebrow: currentLanguage === "hi" ? "सिक्योर ट्रांसमिशन" : "Secure Transmission",
+      title: currentLanguage === "hi" ? "आपका मैसेज भेजा जा रहा है" : "Sending your message",
+      message:
+        currentLanguage === "hi"
+          ? "आपकी inquiry Formspree के माध्यम से securely deliver हो रही है।"
+          : "Your inquiry is being delivered securely through Formspree.",
+      autoHideMs: 0,
+    };
+  }
+
+  if (statusKey === "success") {
+    return {
+      state: "success",
+      eyebrow: currentLanguage === "hi" ? "मैसेज डिलीवर्ड" : "Message Delivered",
+      title: currentLanguage === "hi" ? "Inquiry सफलतापूर्वक भेज दी गई" : "Inquiry sent successfully",
+      message:
+        currentLanguage === "hi"
+          ? "बहुत बढ़िया. आपका संदेश पहुंच गया है और मैं जल्द ही आपसे संपर्क करूंगा।"
+          : "All set. Your message has been delivered and I will get back to you shortly.",
+      autoHideMs: 5200,
+    };
+  }
+
+  if (statusKey === "error") {
+    return {
+      state: "error",
+      eyebrow: currentLanguage === "hi" ? "डिलीवरी इश्यू" : "Delivery Issue",
+      title: currentLanguage === "hi" ? "अभी भेजने में समस्या आ रही है" : "Couldn't send it just now",
+      message:
+        currentLanguage === "hi"
+          ? "कृपया कुछ देर बाद फिर कोशिश करें, या WhatsApp और LinkedIn के माध्यम से संपर्क करें।"
+          : "Please try again in a moment, or reach out through WhatsApp or LinkedIn instead.",
+      autoHideMs: 5600,
+    };
+  }
+
+  if (statusKey === "packageSelected" && packageId) {
+    return {
+      state: "submitting",
+      eyebrow: currentLanguage === "hi" ? "पैकेज चुना गया" : "Package Selected",
+      title:
+        currentLanguage === "hi"
+          ? `${getPackageName(packageId)} तैयार है`
+          : `${getPackageName(packageId)} is ready`,
+      message:
+        currentLanguage === "hi"
+          ? "अब अपनी details भरें और inquiry भेजें."
+          : "Now add your details and send the inquiry.",
+      autoHideMs: 3600,
+    };
+  }
+
+  return null;
+}
+
+function getFormToastIcon(state) {
+  if (state === "success") {
+    return `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="m9.55 16.6-3.9-3.9 1.41-1.41 2.49 2.49 7.39-7.39 1.41 1.41-8.8 8.8Z"></path>
+      </svg>
+    `;
+  }
+
+  if (state === "error" || state === "validation") {
+    return `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M11 6h2v8h-2V6Zm0 10h2v2h-2v-2Z"></path>
+      </svg>
+    `;
+  }
+
+  return `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M12 4a8 8 0 1 0 8 8h-2a6 6 0 1 1-1.76-4.24L14.5 9.5H20V4l-2.34 2.34A7.96 7.96 0 0 0 12 4Z"></path>
+    </svg>
+  `;
 }
 
 function getFormStatusMessage(statusKey, packageId = "") {
