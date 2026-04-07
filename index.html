@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vinay Vishwakarma is a web developer crafting fast, scalable, and visually polished digital experiences."
+    />
+    <meta name="theme-color" content="#05070c" />
+    <title>Vinay Vishwakarma | Premium Web Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-shell">
+        <a class="brand" href="#top" aria-label="Vinay Vishwakarma home">
+          <span class="brand-mark">VV</span>
+          <span class="brand-text">Vinay Vishwakarma</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#skills" data-i18n-key="nav.skills">Skills</a>
+          <a href="#projects" data-i18n-key="nav.projects">Projects</a>
+          <a href="#pricing" data-i18n-key="nav.pricing">Pricing</a>
+          <a href="#metrics" data-i18n-key="nav.impact">Impact</a>
+          <a href="#contact" data-i18n-key="nav.contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="language-toggle" role="group" aria-label="Toggle language">
+            <button
+              class="language-toggle__button is-active"
+              type="button"
+              data-lang-option="en"
+              aria-pressed="true"
+            >
+              EN
+            </button>
+            <span class="language-toggle__divider" aria-hidden="true"></span>
+            <button
+              class="language-toggle__button"
+              type="button"
+              data-lang-option="hi"
+              aria-pressed="false"
+            >
+              HI
+            </button>
+          </div>
+
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open navigation"
+          >
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+          </button>
+
+          <a class="header-link" href="#contact">
+            <span data-i18n-key="nav.cta">Let's Talk</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              <span data-i18n-key="hero.eyebrow">
+                Available for freelance, product, and growth-focused builds
+              </span>
+            </p>
+
+            <h1
+              class="hero-title"
+              aria-label="Hi, I am Vinay Vishwakarma. I build fast, scalable, and visually stunning web experiences."
+            >
+              <span
+                class="typing-line typing-line--primary"
+                data-en="Hi, I am Vinay Vishwakarma."
+                data-hi="नमस्ते, मैं विनय विश्वकर्मा हूँ।"
+              ></span>
+              <span
+                class="typing-line typing-line--secondary"
+                data-en="I build fast, scalable, and visually stunning web experiences."
+                data-hi="मैं तेज, स्केलेबल और visually stunning web experiences बनाता हूँ।"
+              ></span>
+            </h1>
+
+            <p class="hero-description" data-i18n-key="hero.description">
+              I design and ship digital experiences that feel premium from the first
+              scroll, with clean architecture, thoughtful motion, and mobile-first
+              precision.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button--primary magnetic-button" href="#contact">
+                <span data-i18n-key="hero.primaryCta">Let's Talk</span>
+              </a>
+              <a class="button button--ghost" href="#projects">
+                <span data-i18n-key="hero.secondaryCta">See Featured Work</span>
+              </a>
+            </div>
+
+            <div class="hero-points">
+              <div class="hero-point">
+                <span class="hero-point__label" data-i18n-key="hero.point.speed.label">Speed</span>
+                <span class="hero-point__value" data-i18n-key="hero.point.speed.value">Launch-ready builds</span>
+              </div>
+              <div class="hero-point">
+                <span class="hero-point__label" data-i18n-key="hero.point.ux.label">UX</span>
+                <span class="hero-point__value" data-i18n-key="hero.point.ux.value">Smooth, meaningful motion</span>
+              </div>
+              <div class="hero-point">
+                <span class="hero-point__label" data-i18n-key="hero.point.mobile.label">Mobile</span>
+                <span class="hero-point__value" data-i18n-key="hero.point.mobile.value">Flawless responsive execution</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-visual__halo hero-visual__halo--blue"></div>
+            <div class="hero-visual__halo hero-visual__halo--purple"></div>
+
+            <div class="hero-panel">
+              <div class="hero-panel__header">
+                <span class="status-pill">
+                  <span class="status-pill__dot"></span>
+                  <span data-i18n-key="hero.panel.status">Premium UI Pipeline</span>
+                </span>
+                <span class="hero-panel__meta" data-i18n-key="hero.panel.meta">Responsive by default</span>
+              </div>
+
+              <div class="hero-panel__body">
+                <div class="signal-card">
+                  <p class="signal-card__title" data-i18n-key="hero.panel.title">What Vinay brings</p>
+                  <ul class="signal-list">
+                    <li data-i18n-key="hero.panel.item1">Luxury-grade web presentation</li>
+                    <li data-i18n-key="hero.panel.item2">Conversion-minded interaction design</li>
+                    <li data-i18n-key="hero.panel.item3">Fast, maintainable front-end systems</li>
+                  </ul>
+                </div>
+
+                <div class="code-card">
+                  <div class="code-card__top">
+                    <span class="code-dot"></span>
+                    <span class="code-dot"></span>
+                    <span class="code-dot"></span>
+                    <span class="code-file">experience.js</span>
+                  </div>
+                  <pre class="code-snippet"><code>const buildProfile = {
+  performance: "fast",
+  visualStyle: "expensive",
+  responsive: "flawless",
+  detailLevel: "obsessive"
+};</code></pre>
+                </div>
+
+                <div class="mini-grid">
+                  <article class="mini-card">
+                    <span class="mini-card__metric">100%</span>
+                    <p data-i18n-key="hero.panel.card1">Focus on clean structure and clarity</p>
+                  </article>
+                  <article class="mini-card">
+                    <span class="mini-card__metric">24/7</span>
+                    <p data-i18n-key="hero.panel.card2">Layouts tuned for every viewport</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker" data-i18n-key="skills.kicker">Core Skills</p>
+            <h2 data-i18n-key="skills.title">Interactive systems, responsive craft, and polished delivery.</h2>
+            <p data-i18n-key="skills.subtitle">
+              A focused toolkit built around execution quality, performance, and
+              visual clarity.
+            </p>
+          </div>
+
+          <div class="mobile-slider-toolbar" data-mobile-slider-controls="skills">
+            <button
+              class="mobile-slider-toolbar__button"
+              type="button"
+              data-mobile-slider-nav="prev"
+              data-mobile-slider-target="skills"
+              aria-label="Previous skill"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m14.7 5.29 1.41 1.42L10.83 12l5.28 5.29-1.41 1.42L8 12l6.7-6.71Z" />
+              </svg>
+            </button>
+            <div class="mobile-slider-toolbar__count" aria-live="polite">
+              <span data-mobile-slider-current="skills">01</span>
+              <span>/</span>
+              <span data-mobile-slider-total="skills">06</span>
+            </div>
+            <button
+              class="mobile-slider-toolbar__button"
+              type="button"
+              data-mobile-slider-nav="next"
+              data-mobile-slider-target="skills"
+              aria-label="Next skill"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9.3 18.71-1.41-1.42L13.17 12 7.89 6.71 9.3 5.29 16 12l-6.7 6.71Z" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="skills-grid" data-mobile-slider="skills">
+            <article class="skill-card reveal">
+              <span class="skill-card__index">01</span>
+              <h3 data-i18n-key="skills.card1.title">JavaScript</h3>
+              <p data-i18n-key="skills.card1.body">
+                Building fast front-end interactions, intuitive UI logic, and smooth
+                motion systems with maintainable code.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <span class="skill-card__index">02</span>
+              <h3 data-i18n-key="skills.card2.title">Git &amp; GitHub</h3>
+              <p data-i18n-key="skills.card2.body">
+                Version-controlled workflows that keep iterations clean, traceable,
+                and collaboration-friendly.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <span class="skill-card__index">03</span>
+              <h3 data-i18n-key="skills.card3.title">Responsive UI Design</h3>
+              <p data-i18n-key="skills.card3.body">
+                Elegant layouts that scale confidently across mobile, tablet, and
+                desktop without breaking the visual experience.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <span class="skill-card__index">04</span>
+              <h3 data-i18n-key="skills.card4.title">Digital Content / Prompt Engineering</h3>
+              <p data-i18n-key="skills.card4.body">
+                Structured creative direction for faster ideation, sharper concepts,
+                and more intentional digital output.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <span class="skill-card__index">05</span>
+              <h3 data-i18n-key="skills.card5.title">Performance-First Builds</h3>
+              <p data-i18n-key="skills.card5.body">
+                Thoughtful front-end decisions that support speed, readability, and a
+                smooth user experience.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <span class="skill-card__index">06</span>
+              <h3 data-i18n-key="skills.card6.title">Visual Storytelling</h3>
+              <p data-i18n-key="skills.card6.body">
+                Translating brands, ideas, and campaigns into interfaces that feel
+                cohesive, premium, and high-impact.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p
+              class="section-kicker"
+              data-en="Featured Work / Projects"
+              data-hi="फीचर्ड वर्क / प्रोजेक्ट्स"
+            >
+              Featured Work / Projects
+            </p>
+            <h2
+              data-en="A premium showcase that lets visitors explore one polished launch at a time."
+              data-hi="एक प्रीमियम शोकेस जो विज़िटर्स को हर polished launch को एक समय में एक प्रोजेक्ट के रूप में देखने देता है।"
+            >
+              A premium showcase that lets visitors explore one polished launch at a time.
+            </h2>
+            <p
+              data-en="Use the main arrows, swipe gestures, and screenshot dots to move through live builds without leaving the page."
+              data-hi="मुख्य arrows, swipe gestures और screenshot dots का उपयोग करके live builds को बिना पेज छोड़े एक्सप्लोर करें।"
+            >
+              Use the main arrows, swipe gestures, and screenshot dots to move through
+              live builds without leaving the page.
+            </p>
+          </div>
+
+          <div class="project-showcase reveal" data-project-slider>
+            <div class="project-slider__chrome">
+              <button
+                class="project-slider__arrow project-slider__arrow--prev"
+                type="button"
+                data-project-nav="prev"
+                aria-label="Previous project"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m14.7 5.29 1.41 1.42L10.83 12l5.28 5.29-1.41 1.42L8 12l6.7-6.71Z" />
+                </svg>
+              </button>
+
+              <div class="project-slider__status">
+                <span
+                  class="project-slider__eyebrow"
+                  data-en="Featured Case Study"
+                  data-hi="फीचर्ड केस स्टडी"
+                >
+                  Featured Case Study
+                </span>
+                <div class="project-slider__count" aria-live="polite">
+                  <span data-project-current>01</span>
+                  <span>/</span>
+                  <span data-project-total>04</span>
+                </div>
+              </div>
+
+              <button
+                class="project-slider__arrow project-slider__arrow--next"
+                type="button"
+                data-project-nav="next"
+                aria-label="Next project"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m9.3 18.71-1.41-1.42L13.17 12 7.89 6.71 9.3 5.29 16 12l-6.7 6.71Z" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="project-slider__viewport" data-project-viewport>
+              <article class="project-card project-card--slider project-card--savita project-slide is-active" data-project-slide>
+                <div class="project-media project-card__visual project-card__visual--savita" data-project-carousel>
+                  <div class="project-media__slides">
+                    <div class="project-media__slide is-active" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/savita-homeland-1.webp"
+                        alt="Savita Homelands screenshot 1"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/savita-homeland-2.webp"
+                        alt="Savita Homelands screenshot 2"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/savita-homeland-3.webp"
+                        alt="Savita Homelands screenshot 3"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/savita-homeland-4.webp"
+                        alt="Savita Homelands screenshot 4"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="project-media__topbar">
+                    <span class="project-media__label" data-en="Real Estate Launch" data-hi="रियल एस्टेट लॉन्च">
+                      Real Estate Launch
+                    </span>
+                    <span class="project-media__count" data-project-image-count>01 / 04</span>
+                  </div>
+
+                  <div class="project-media__dots" role="tablist" aria-label="Savita Homelands screenshots">
+                    <button class="project-media__dot is-active" type="button" data-project-dot="0" aria-label="Show Savita screenshot 1"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="1" aria-label="Show Savita screenshot 2"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="2" aria-label="Show Savita screenshot 3"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="3" aria-label="Show Savita screenshot 4"></button>
+                  </div>
+                </div>
+
+                <div class="project-card__content project-card__content--slider">
+                  <div class="project-slide__copy">
+                    <p class="project-card__category" data-en="Premium Property Branding" data-hi="प्रीमियम प्रॉपर्टी ब्रांडिंग">
+                      Premium Property Branding
+                    </p>
+                    <h3 data-en="Savita Homelands (Real Estate)" data-hi="सविता होमलैंड्स (रियल एस्टेट)">
+                      Savita Homelands (Real Estate)
+                    </h3>
+                    <p data-en="Premium real estate landing page with flawless UI components." data-hi="बेहतरीन UI components के साथ तैयार किया गया एक प्रीमियम real estate landing page।">
+                      Premium real estate landing page with flawless UI components.
+                    </p>
+                  </div>
+
+                  <ul class="tag-list">
+                    <li>Real Estate UI</li>
+                    <li>Responsive Design</li>
+                    <li>JS</li>
+                  </ul>
+
+                  <div class="project-card__actions project-card__actions--slider">
+                    <a
+                      class="button button--primary button--project"
+                      href="https://savitahomelands-realestate.pages.dev"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span data-en="Live Preview" data-hi="लाइव प्रीव्यू">Live Preview</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z" />
+                      </svg>
+                    </a>
+                    <a
+                      class="button button--ghost button--project"
+                      href="https://github.com/Vinay0775/Savitahomelands_RealEstate_landing_page"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span data-en="GitHub Repo" data-hi="गिटहब रिपो">GitHub Repo</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.49-1.11-1.49-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.67.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.29 9.29 0 0 1 12 6.85c.85 0 1.71.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.54 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.95.68 1.91v2.82c0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card project-card--slider project-card--yadav project-slide" data-project-slide>
+                <div class="project-media project-card__visual project-card__visual--yadav" data-project-carousel>
+                  <div class="project-media__slides">
+                    <div class="project-media__slide is-active" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/yadav-veggie-1.webp"
+                        alt="Yadav Vegetable and Ice Cream Parlour screenshot 1"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/yadav-veggie-2.webp"
+                        alt="Yadav Vegetable and Ice Cream Parlour screenshot 2"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/yadav-veggie-3.webp"
+                        alt="Yadav Vegetable and Ice Cream Parlour screenshot 3"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="project-media__topbar">
+                    <span class="project-media__label" data-en="Local Business Launch" data-hi="लोकल बिज़नेस लॉन्च">
+                      Local Business Launch
+                    </span>
+                    <span class="project-media__count" data-project-image-count>01 / 03</span>
+                  </div>
+
+                  <div class="project-media__dots" role="tablist" aria-label="Yadav Vegetable and Ice Cream Parlour screenshots">
+                    <button class="project-media__dot is-active" type="button" data-project-dot="0" aria-label="Show Yadav screenshot 1"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="1" aria-label="Show Yadav screenshot 2"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="2" aria-label="Show Yadav screenshot 3"></button>
+                  </div>
+                </div>
+
+                <div class="project-card__content project-card__content--slider">
+                  <div class="project-slide__copy">
+                    <p class="project-card__category" data-en="Local Business Website" data-hi="लोकल बिज़नेस वेबसाइट">
+                      Local Business Website
+                    </p>
+                    <h3 data-en="Yadav Vegetable &amp; Ice Cream Parlour" data-hi="यादव वेजिटेबल एंड आइसक्रीम पार्लर">
+                      Yadav Vegetable &amp; Ice Cream Parlour
+                    </h3>
+                    <p data-en="Clean, attractive local business website for a parlor." data-hi="एक parlour के लिए बनाई गई साफ-सुथरी और आकर्षक local business website।">
+                      Clean, attractive local business website for a parlor.
+                    </p>
+                  </div>
+
+                  <ul class="tag-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Local Business</li>
+                  </ul>
+
+                  <div class="project-card__actions project-card__actions--slider">
+                    <a
+                      class="button button--primary button--project"
+                      href="https://yadav-vegetable-ice-cream-parlour.pages.dev/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span data-en="Live Preview" data-hi="लाइव प्रीव्यू">Live Preview</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z" />
+                      </svg>
+                    </a>
+                    <a
+                      class="button button--ghost button--project"
+                      href="https://github.com/Vinay0775/Yadav-Vegetable-Ice-Cream-parlour"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span data-en="GitHub Repo" data-hi="गिटहब रिपो">GitHub Repo</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.49-1.11-1.49-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.67.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.29 9.29 0 0 1 12 6.85c.85 0 1.71.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.54 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.95.68 1.91v2.82c0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card project-card--slider project-card--finance project-slide" data-project-slide>
+                <div class="project-media project-card__visual project-card__visual--finance" data-project-carousel>
+                  <div class="project-media__slides">
+                    <div class="project-media__slide is-active" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/finance-1.webp"
+                        alt="Finance and Loan Services screenshot 1"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/finance-2.webp"
+                        alt="Finance and Loan Services screenshot 2"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/finance-3.webp"
+                        alt="Finance and Loan Services screenshot 3"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/finance-4.webp"
+                        alt="Finance and Loan Services screenshot 4"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="project-media__topbar">
+                    <span class="project-media__label" data-en="Fintech Web Experience" data-hi="फिनटेक वेब एक्सपीरियंस">
+                      Fintech Web Experience
+                    </span>
+                    <span class="project-media__count" data-project-image-count>01 / 04</span>
+                  </div>
+
+                  <div class="project-media__dots" role="tablist" aria-label="Finance and Loan Services screenshots">
+                    <button class="project-media__dot is-active" type="button" data-project-dot="0" aria-label="Show Finance screenshot 1"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="1" aria-label="Show Finance screenshot 2"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="2" aria-label="Show Finance screenshot 3"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="3" aria-label="Show Finance screenshot 4"></button>
+                  </div>
+                </div>
+
+                <div class="project-card__content project-card__content--slider">
+                  <div class="project-slide__copy">
+                    <p class="project-card__category" data-en="Finance Conversion Layout" data-hi="फाइनेंस कन्वर्ज़न लेआउट">
+                      Finance Conversion Layout
+                    </p>
+                    <h3 data-en="Finance &amp; Loan Services" data-hi="फाइनेंस एंड लोन सर्विसेज">
+                      Finance &amp; Loan Services
+                    </h3>
+                    <p data-en="Professional fintech layout with clear call-to-actions." data-hi="स्पष्ट call-to-actions के साथ तैयार किया गया एक professional fintech layout।">
+                      Professional fintech layout with clear call-to-actions.
+                    </p>
+                  </div>
+
+                  <ul class="tag-list">
+                    <li>Fintech</li>
+                    <li>Corporate UI</li>
+                    <li>Bootstrap/CSS</li>
+                  </ul>
+
+                  <div class="project-card__actions project-card__actions--slider">
+                    <a
+                      class="button button--primary button--project"
+                      href="https://finance-and-loan-website.pages.dev/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span data-en="Live Preview" data-hi="लाइव प्रीव्यू">Live Preview</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z" />
+                      </svg>
+                    </a>
+                    <a
+                      class="button button--ghost button--project"
+                      href="https://github.com/Vinay0775/finance-and-loan-website"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span data-en="GitHub Repo" data-hi="गिटहब रिपो">GitHub Repo</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.49-1.11-1.49-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.67.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.29 9.29 0 0 1 12 6.85c.85 0 1.71.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.54 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.95.68 1.91v2.82c0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card project-card--slider project-card--urban project-slide" data-project-slide>
+                <div class="project-media project-card__visual project-card__visual--urban" data-project-carousel>
+                  <div class="project-media__slides">
+                    <div class="project-media__slide is-active" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/urban-edge-1.webp"
+                        alt="Urban Edge E-commerce screenshot 1"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/urban-edge-2.webp"
+                        alt="Urban Edge E-commerce screenshot 2"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/urban-edge-3.webp"
+                        alt="Urban Edge E-commerce screenshot 3"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="project-media__slide" data-project-image-slide>
+                      <img
+                        class="project-media__image"
+                        data-project-image
+                        src="./images/urban-edge-4.webp"
+                        alt="Urban Edge E-commerce screenshot 4"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="project-media__topbar">
+                    <span class="project-media__label" data-en="E-commerce Frontend" data-hi="ई-कॉमर्स फ्रंटेंड">
+                      E-commerce Frontend
+                    </span>
+                    <span class="project-media__count" data-project-image-count>01 / 04</span>
+                  </div>
+
+                  <div class="project-media__dots" role="tablist" aria-label="Urban Edge E-commerce screenshots">
+                    <button class="project-media__dot is-active" type="button" data-project-dot="0" aria-label="Show Urban Edge screenshot 1"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="1" aria-label="Show Urban Edge screenshot 2"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="2" aria-label="Show Urban Edge screenshot 3"></button>
+                    <button class="project-media__dot" type="button" data-project-dot="3" aria-label="Show Urban Edge screenshot 4"></button>
+                  </div>
+                </div>
+
+                <div class="project-card__content project-card__content--slider">
+                  <div class="project-slide__copy">
+                    <p class="project-card__category" data-en="Modern Commerce UI" data-hi="मॉडर्न कॉमर्स यूआई">
+                      Modern Commerce UI
+                    </p>
+                    <h3 data-en="Urban Edge E-commerce" data-hi="अर्बन एज ई-कॉमर्स">
+                      Urban Edge E-commerce
+                    </h3>
+                    <p data-en="Modern e-commerce frontend with sleek animations." data-hi="स्लीक animations के साथ तैयार किया गया एक modern e-commerce frontend।">
+                      Modern e-commerce frontend with sleek animations.
+                    </p>
+                  </div>
+
+                  <ul class="tag-list">
+                    <li>E-commerce</li>
+                    <li>Frontend</li>
+                    <li>UI/UX</li>
+                  </ul>
+
+                  <div class="project-card__actions project-card__actions--slider">
+                    <a
+                      class="button button--primary button--project"
+                      href="https://urban-edge-ecommerce.pages.dev/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span data-en="Live Preview" data-hi="लाइव प्रीव्यू">Live Preview</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z" />
+                      </svg>
+                    </a>
+                    <a
+                      class="button button--ghost button--project"
+                      href="https://github.com/Vinay0775/urban-edge-ecommerce"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span data-en="GitHub Repo" data-hi="गिटहब रिपो">GitHub Repo</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.49-1.11-1.49-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.67.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.29 9.29 0 0 1 12 6.85c.85 0 1.71.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.54 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.95.68 1.91v2.82c0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="project-slider__pagination" role="tablist" aria-label="Project navigation">
+              <button class="project-slider__pager is-active" type="button" data-project-pager="0">
+                <span data-en="Savita" data-hi="सविता">Savita</span>
+              </button>
+              <button class="project-slider__pager" type="button" data-project-pager="1">
+                <span data-en="Yadav" data-hi="यादव">Yadav</span>
+              </button>
+              <button class="project-slider__pager" type="button" data-project-pager="2">
+                <span data-en="Finance" data-hi="फाइनेंस">Finance</span>
+              </button>
+              <button class="project-slider__pager" type="button" data-project-pager="3">
+                <span data-en="Urban Edge" data-hi="अर्बन एज">Urban Edge</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--pricing" id="pricing">
+        <div class="container">
+          <div class="section-heading section-heading--center reveal">
+            <p class="section-kicker" data-i18n-key="pricing.kicker">Pricing Packages</p>
+            <h2 data-i18n-key="pricing.title">Transparent Pricing for Your Digital Growth</h2>
+            <p data-i18n-key="pricing.subtitle">
+              Clear starting points for premium builds, responsive launches, and
+              custom web systems that scale with your business.
+            </p>
+          </div>
+
+          <div class="mobile-slider-toolbar" data-mobile-slider-controls="pricing">
+            <button
+              class="mobile-slider-toolbar__button"
+              type="button"
+              data-mobile-slider-nav="prev"
+              data-mobile-slider-target="pricing"
+              aria-label="Previous pricing package"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m14.7 5.29 1.41 1.42L10.83 12l5.28 5.29-1.41 1.42L8 12l6.7-6.71Z" />
+              </svg>
+            </button>
+            <div class="mobile-slider-toolbar__count" aria-live="polite">
+              <span data-mobile-slider-current="pricing">01</span>
+              <span>/</span>
+              <span data-mobile-slider-total="pricing">03</span>
+            </div>
+            <button
+              class="mobile-slider-toolbar__button"
+              type="button"
+              data-mobile-slider-nav="next"
+              data-mobile-slider-target="pricing"
+              aria-label="Next pricing package"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9.3 18.71-1.41-1.42L13.17 12 7.89 6.71 9.3 5.29 16 12l-6.7 6.71Z" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="pricing-grid" data-mobile-slider="pricing">
+            <article class="pricing-card reveal">
+              <div class="pricing-card__top">
+                <p class="pricing-card__name" data-i18n-key="pricing.starter.name">Starter Package</p>
+                <p class="pricing-card__price">
+                  <span data-i18n-key="pricing.startingAt">Starting at</span>
+                  <strong>&#8377;10,000</strong>
+                </p>
+                <p class="pricing-card__target" data-i18n-key="pricing.starter.target">
+                  Best for small businesses and single-product launches
+                </p>
+              </div>
+
+              <ul class="pricing-features" aria-label="Starter Package features">
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.starter.feature1">Single Page / Landing Page</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.starter.feature2">Flawless Mobile Responsive UI</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.starter.feature3">Contact Form and WhatsApp Integration</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.starter.feature4">Delivered in 3-5 Days</span>
+                </li>
+              </ul>
+
+              <a
+                class="button button--ghost pricing-card__button"
+                href="#contact"
+                data-package-select="starter"
+              >
+                <span data-i18n-key="pricing.starter.cta">Get Started</span>
+              </a>
+            </article>
+
+            <article class="pricing-card pricing-card--featured reveal">
+              <span class="pricing-badge" data-i18n-key="pricing.badge">Recommended</span>
+              <div class="pricing-card__top">
+                <p class="pricing-card__name" data-i18n-key="pricing.professional.name">Professional Package</p>
+                <p class="pricing-card__price">
+                  <span data-i18n-key="pricing.startingAt">Starting at</span>
+                  <strong>&#8377;25,000</strong>
+                </p>
+                <p class="pricing-card__target" data-i18n-key="pricing.professional.target">
+                  Best for agencies, clinics and real estate
+                </p>
+              </div>
+
+              <ul class="pricing-features" aria-label="Professional Package features">
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.professional.feature1">Up to 5-7 Pages</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.professional.feature2">Premium Custom UI/UX Design</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.professional.feature3">Fast Loading and SEO Ready</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.professional.feature4">1 Month Free Support</span>
+                </li>
+              </ul>
+
+              <a
+                class="button button--primary pricing-card__button"
+                href="#contact"
+                data-package-select="professional"
+              >
+                <span data-i18n-key="pricing.professional.cta">Discuss Project</span>
+              </a>
+            </article>
+
+            <article class="pricing-card reveal">
+              <div class="pricing-card__top">
+                <p class="pricing-card__name" data-i18n-key="pricing.advanced.name">Advanced Web Apps</p>
+                <p class="pricing-card__price">
+                  <span data-i18n-key="pricing.startingAt">Starting at</span>
+                  <strong data-i18n-key="pricing.advanced.price">Custom Quote</strong>
+                </p>
+                <p class="pricing-card__target" data-i18n-key="pricing.advanced.target">
+                  Best for portals, dashboards and e-commerce
+                </p>
+              </div>
+
+              <ul class="pricing-features" aria-label="Advanced Web Apps features">
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.advanced.feature1">Custom Backend Logic</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.advanced.feature2">Admin Panel and Database</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.advanced.feature3">Payment Gateway Integration</span>
+                </li>
+                <li>
+                  <span class="pricing-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m9.55 17.45-4.5-4.5 1.4-1.4 3.1 3.09 7.99-8 1.41 1.42-9.4 9.39Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n-key="pricing.advanced.feature4">Advanced Animations</span>
+                </li>
+              </ul>
+
+              <a
+                class="button button--ghost pricing-card__button"
+                href="#contact"
+                data-package-select="advanced"
+              >
+                <span data-i18n-key="pricing.advanced.cta">Let's Talk</span>
+              </a>
+            </article>
+          </div>
+
+          <p class="pricing-note reveal" data-i18n-key="pricing.note">
+            Note: Prices shown are baseline estimates. Final cost depends on
+            specific project requirements and complexity.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="metrics">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker" data-i18n-key="metrics.kicker">Execution Metrics</p>
+            <h2 data-i18n-key="metrics.title">Built for speed, clarity, and reliable outcomes.</h2>
+          </div>
+
+          <div class="metrics-grid">
+            <article class="metric-card reveal">
+              <span class="metric-card__value" data-counter="48" data-suffix="H">0</span>
+              <h3 data-i18n-key="metrics.card1.title">Fast Delivery</h3>
+              <p data-i18n-key="metrics.card1.body">
+                Rapid build cycles for landing pages, responsive interfaces, and visual
+                assets without sacrificing polish.
+              </p>
+            </article>
+
+            <article class="metric-card reveal">
+              <span class="metric-card__value" data-counter="100" data-suffix="%">0</span>
+              <h3 data-i18n-key="metrics.card2.title">Clean Code</h3>
+              <p data-i18n-key="metrics.card2.body">
+                Intentional structure, scalable styles, and straightforward front-end
+                logic that stays easy to maintain.
+              </p>
+            </article>
+
+            <article class="metric-card reveal">
+              <span class="metric-card__value" data-counter="99" data-suffix="%">0</span>
+              <h3 data-i18n-key="metrics.card3.title">High Accuracy Execution</h3>
+              <p data-i18n-key="metrics.card3.body">
+                Careful attention to layout, spacing, interaction detail, and brand
+                consistency from concept to final pass.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <p class="section-kicker" data-en="Contact" data-hi="संपर्क">
+              Contact
+            </p>
+            <h2
+              data-en="Let's plan a premium website that looks sharp and converts with confidence."
+              data-hi="आइए ऐसी premium website की योजना बनाएं जो शानदार दिखे और भरोसे के साथ बेहतर conversion दे।"
+            >
+              Let's plan a premium website that looks sharp and converts with confidence.
+            </h2>
+            <p
+              data-en="Send your project brief through the form below. It submits through Formspree, so the setup stays lightweight while your inquiries still arrive securely."
+              data-hi="नीचे दिए गए form के माध्यम से अपना project brief भेजें। यह Formspree से submit होता है, इसलिए setup lightweight रहता है और आपकी inquiries सुरक्षित रूप से पहुंचती हैं।"
+            >
+              Send your project brief through the form below. It submits through Formspree,
+              so the setup stays lightweight while your inquiries still arrive securely.
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-card">
+                <span data-en="Best Fit" data-hi="बेस्ट फिट">Best Fit</span>
+                <strong
+                  data-en="Landing pages, branded business sites, and UI revamps"
+                  data-hi="लैंडिंग पेज, branded business sites और UI revamps"
+                >
+                  Landing pages, branded business sites, and UI revamps
+                </strong>
+              </div>
+              <div class="contact-card">
+                <span data-en="Workflow" data-hi="वर्कफ़्लो">Workflow</span>
+                <strong
+                  data-en="Clear scope, fast feedback, and reliable execution"
+                  data-hi="क्लियर scope, तेज feedback और reliable execution"
+                >
+                  Clear scope, fast feedback, and reliable execution
+                </strong>
+              </div>
+              <div class="contact-card">
+                <span data-en="Reply Window" data-hi="रिप्लाई विंडो">Reply Window</span>
+                <strong data-en="Usually within 24 hours" data-hi="आमतौर पर 24 घंटे के भीतर">
+                  Usually within 24 hours
+                </strong>
+              </div>
+            </div>
+
+            <div class="social-links" aria-label="Social links">
+              <a class="social-link" data-social="github" href="https://github.com/your-github" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2C6.477 2 2 6.589 2 12.25c0 4.528 2.865 8.37 6.839 9.727.5.095.682-.22.682-.49 0-.242-.009-.882-.014-1.731-2.782.62-3.369-1.376-3.369-1.376-.455-1.18-1.11-1.495-1.11-1.495-.908-.635.069-.622.069-.622 1.004.072 1.532 1.059 1.532 1.059.892 1.56 2.341 1.11 2.91.849.091-.664.35-1.11.636-1.365-2.221-.26-4.556-1.137-4.556-5.061 0-1.118.389-2.033 1.029-2.75-.103-.26-.446-1.307.098-2.724 0 0 .84-.276 2.75 1.05A9.304 9.304 0 0 1 12 6.852c.85.004 1.705.117 2.504.343 1.909-1.326 2.748-1.05 2.748-1.05.545 1.417.202 2.464.1 2.724.64.717 1.028 1.632 1.028 2.75 0 3.934-2.339 4.798-4.566 5.054.359.318.678.945.678 1.905 0 1.375-.013 2.485-.013 2.823 0 .272.18.589.688.489C19.138 20.617 22 16.776 22 12.25 22 6.589 17.523 2 12 2Z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a class="social-link" data-social="linkedin" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6.94 8.5H3.56v11h3.38v-11ZM5.25 3a1.97 1.97 0 1 0 0 3.94A1.97 1.97 0 0 0 5.25 3Zm14.19 9.69c0-3.11-1.66-4.56-3.88-4.56-1.79 0-2.6.98-3.05 1.67V8.5H9.13c.04.85 0 11 0 11h3.38v-6.14c0-.33.02-.66.12-.89.26-.66.86-1.34 1.86-1.34 1.31 0 1.84.99 1.84 2.44v5.93h3.38v-6.81Z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a class="social-link" data-social="whatsapp" href="https://wa.me/910000000000" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12.04 2C6.5 2 2 6.39 2 11.8c0 1.9.56 3.75 1.62 5.34L2.03 22l5.07-1.54a10.16 10.16 0 0 0 4.94 1.28h.01c5.54 0 10.04-4.39 10.04-9.8S17.59 2 12.04 2Zm5.89 13.76c-.25.7-1.44 1.31-1.99 1.4-.53.09-1.2.13-1.94-.11-.45-.15-1.03-.33-1.77-.64-3.1-1.34-5.11-4.45-5.27-4.66-.16-.22-1.26-1.65-1.26-3.15 0-1.5.8-2.23 1.08-2.53.28-.3.61-.37.82-.37.2 0 .41 0 .59.01.19.01.44-.07.69.54.25.6.84 2.08.91 2.23.08.15.13.33.03.54-.1.2-.15.33-.3.5-.15.17-.31.38-.44.52-.15.15-.31.31-.13.62.17.3.77 1.25 1.66 2.02 1.14.98 2.11 1.28 2.41 1.42.3.15.47.13.64-.08.17-.2.74-.85.94-1.14.2-.29.4-.24.67-.15.28.09 1.73.81 2.03.96.3.15.5.22.57.35.07.13.07.75-.18 1.45Z"
+                  />
+                </svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <div class="contact-form__intro">
+              <span class="contact-form__eyebrow" data-en="Project Inquiry" data-hi="प्रोजेक्ट इन्क्वायरी">
+                Project Inquiry
+              </span>
+              <p
+                data-en="Share your goals, timeline, and must-have features. I will receive everything directly through the form."
+                data-hi="अपने goals, timeline और must-have features साझा करें। मुझे सब कुछ सीधे इसी form के माध्यम से मिल जाएगा।"
+              >
+                Share your goals, timeline, and must-have features. I will receive everything
+                directly through the form.
+              </p>
+            </div>
+
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://formspree.io/f/mlgozvgy"
+              method="POST"
+              accept-charset="UTF-8"
+              novalidate
+            >
+              <input type="hidden" name="_subject" value="New portfolio inquiry from Vinay Vishwakarma website" />
+
+              <div class="contact-form__row">
+                <label>
+                  <span data-en="Name" data-hi="नाम">Name</span>
+                  <input
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Your name"
+                    data-i18n-placeholder="form.namePlaceholder"
+                    required
+                  />
+                </label>
+
+                <label>
+                  <span data-en="Email" data-hi="ईमेल">Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="your@email.com"
+                    data-i18n-placeholder="form.emailPlaceholder"
+                    required
+                  />
+                </label>
+              </div>
+
+              <label class="contact-form__message">
+                <span data-en="Message" data-hi="मैसेज">Message</span>
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Tell me about your project, timeline, and what a great outcome looks like."
+                  data-i18n-placeholder="form.messagePlaceholder"
+                  required
+                ></textarea>
+              </label>
+
+              <button class="button button--primary contact-form__submit" type="submit">
+                <span data-en="Send Message" data-hi="संदेश भेजें">Send Message</span>
+              </button>
+              <p
+                class="contact-form__note"
+                data-en="Messages are sent securely through Formspree and delivered directly to your inbox."
+                data-hi="मैसेज Formspree के माध्यम से सुरक्षित रूप से भेजे जाते हैं और सीधे आपके inbox में पहुंचते हैं।"
+              >
+                Messages are sent securely through Formspree and delivered directly to your inbox.
+              </p>
+              <p class="form-status" id="form-status" aria-live="polite">
+                Send your project details and I will get back to you shortly.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <p>
+          &copy; <span id="year"></span> Vinay Vishwakarma.
+          <span data-i18n-key="footer.copy">Crafted for premium digital impact.</span>
+        </p>
+        <a href="#top" data-i18n-key="footer.backToTop">Back to top</a>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m12 5 6 6-1.41 1.41L13 8.83V20h-2V8.83l-3.59 3.58L6 11l6-6Z" />
+      </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
